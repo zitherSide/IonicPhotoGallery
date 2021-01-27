@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
+import {defineCustomElements} from '@ionic/pwa-elements/loader'
+defineCustomElements(window)
 
 import { IonicVue } from '@ionic/vue';
 
