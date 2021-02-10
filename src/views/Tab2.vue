@@ -30,7 +30,7 @@ import {camera, trash, close} from 'ionicons/icons'
 import { IonPage, IonHeader, IonFab, IonFabButton, IonIcon,
          IonToolbar, IonTitle, IonContent,
          IonGrid, IonRow, IonCol,
-         //IonImg
+         IonImg
         } from '@ionic/vue';
 import { usePhotoGallery, Photo } from '@/composables/usePhotoGallery'
 
@@ -39,7 +39,7 @@ export default  {
   components: { IonPage, IonHeader, IonFab, IonFabButton, IonIcon,
          IonToolbar, IonTitle, IonContent,
          IonGrid, IonRow, IonCol,
-         // IonImg 
+         IonImg 
   },
   setup(){
     const { photos, takePhoto } = usePhotoGallery()
