@@ -91,9 +91,19 @@ export function usePhotoGallery(){
     }
     onMounted(loadSaved)
     
+    const deletePhoto = async (photo: Photo) => {
+        photos.value = photos.value.filter(p => p.filepath !== photo.filepath)
+        const filename = photo.filepath.substr(photo.filepath.lastIndexOf('/') + 1)
+        await Filesystem.deleteFile({
+            path: filename,
+            directory: FilesystemDirectory.Data
+        })
+    }
+    
     return {
         photos,
-        takePhoto
+        takePhoto,
+        deletePhoto
     }
 }
 
